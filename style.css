@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-image: linear-gradient(45deg, mediumblue, mediumvioletred);
+  background-size: 1.2vw 1.2vw;
+}
+
+.center {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+}
+
+
+.am-button.achicar {
+  scale: .9;
+}
+
+.am-button {
+  width: 15rem;
+  height: 5rem;
+  border: 2px solid black;
+  background-color: white;
+  position: relative;
+  text-align: center;
+  line-height: 5rem;
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  transform: skew(15deg);
+  transition: .5s;
+  
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    border: 2px solid black;
+  }
+
+  &::before {
+    width: 1.2rem;
+    height: 100%;
+    left: -16px;
+    top: 5.8px;
+    transform: skewY(-45deg);
+  }
+  &::after {
+    height: 1.2rem;
+    width: 100%;
+    bottom: -16px;
+    left: -8.5px;
+    transform: skewX(-45deg);
+  }
+}
+
+.bg {
+  position: fixed;
+  z-index: 80;
+  background-size: 1.2vw 1.2vw;
+  background-image: var(--lg);
+  width: 100%;
+  height: 100%;
+  transition: 1s; 
+}
+
+.bg-ft {
+  top: -100%;
+}
+
+.bg-from-top {
+  top: 0;
+  z-index: 82;
+}
+
+.bg-fb {
+  top: 100%;
+}
+
+.bg-from-bottom {
+  top: 0;
+  z-index: 86;
+}
+
+.bg-fl {
+  left: -100%;
+}
+
+.bg-from-left {
+  left: 0;
+  z-index: 88;
+}
+
+.bg-fr {
+  left: 100%;
+}
+
+.bg-from-right {
+  left: 0;
+  z-index: 84;
+}
+
+.desaparecer {
+  display: none !important;
+}
+
+
+
+
